@@ -29,6 +29,19 @@ class PalindromeCheckerTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(true, $result);
     }
 
+    function test_checkPalindrome_evenNumberOfCharacters()
+    {
+      //Arrange
+      $test_PalindromeChecker = new PalindromeChecker;
+      $input = 'anna';
+
+      //Act
+      $result = $test_PalindromeChecker->checkPalindrome($input);
+
+      //Assert
+      $this->assertEquals(true, $result);
+    }
+
     function test_checkPalindrome_multipleCharacters_false()
     {
         //Arrange
@@ -40,6 +53,18 @@ class PalindromeCheckerTest extends PHPUnit_Framework_TestCase
 
         //Assert
         $this->assertEquals(false, $result);
+    }
+
+    function test_checkPalindrome_caseInsensitive() {
+        //Arrange
+        $test_PalindromeChecker = new PalindromeChecker;
+        $input = "Hello olleh";
+
+        //Act
+        $result = $test_PalindromeChecker->checkPalindrome($input);
+
+        //Assert
+        $this->assertEquals(true, $result);
     }
 }
 ?>

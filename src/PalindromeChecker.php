@@ -3,7 +3,8 @@ class PalindromeChecker
 {
     function checkPalindrome($input)
     {
-        if (strlen($input) == 1)
+        $input = strtolower($input);
+        if (strlen($input) <= 1)
           return true;
         $a = $input[0];
         $z = $input[strlen($input) - 1];
