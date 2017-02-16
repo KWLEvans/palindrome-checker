@@ -1,0 +1,12 @@
+{% extends "home.html.twig" %}
+
+{% block content %}
+  <p>
+      {% if result %}
+        It's a palindrome!
+      {% else %}
+        That's not a palindrome!
+      {% endif %}
+  </p>
+  <a href='/'>Back</a>
+{% endblock %}

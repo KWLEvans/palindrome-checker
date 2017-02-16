@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Palindrome Checker</title>
+  </head>
+  <body>
+    {% block content %}
+    <form action="/result" method="post">
+      <label for="user-input">Input String here: </label>
+      <input id="user-input" name="user-input" type="text">
+      <button type="submit">Check Palindrome</button>
+    </form>
+    {% endblock %}
+  </body>
+</html>
