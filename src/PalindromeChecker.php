@@ -4,6 +4,7 @@ class PalindromeChecker
     function checkPalindrome($input)
     {
         $input = strtolower($input);
+        $input = preg_replace("/\W*/", "", $input);
         if (strlen($input) <= 1)
           return true;
         $a = $input[0];

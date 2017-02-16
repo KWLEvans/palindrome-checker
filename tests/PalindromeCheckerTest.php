@@ -66,5 +66,18 @@ class PalindromeCheckerTest extends PHPUnit_Framework_TestCase
         //Assert
         $this->assertEquals(true, $result);
     }
+
+    function test_checkPalindrome_punctuation()
+    {
+      //Arrange
+      $test_PalindromeChecker = new PalindromeChecker;
+      $input = "Hello, Olleh";
+
+      //Act
+      $result = $test_PalindromeChecker->checkPalindrome($input);
+
+      //Assert
+      $this->assertEquals(true, $result);
+    }
 }
 ?>
